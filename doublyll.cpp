@@ -22,8 +22,6 @@ public:
     DoublyLinkedList() {
         head = NULL;
     }
-
-    // Insert at Beginning
     void insertAtBeginning(int val) {
         Node* newNode = new Node(val);
 
@@ -35,7 +33,6 @@ public:
         head = newNode;
     }
 
-    // Insert at End
     void insertAtEnd(int val) {
         Node* newNode = new Node(val);
 
@@ -53,7 +50,6 @@ public:
         newNode->prev = temp;
     }
 
-    // Insert at Position (0-based indexing)
     void insertAtPosition(int val, int pos) {
         if (pos == 0) {
             insertAtBeginning(val);
@@ -83,7 +79,6 @@ public:
         temp->next = newNode;
     }
 
-    // Delete from Beginning
     void deleteBeginning() {
         if (head == NULL) {
             cout << "List is empty\n";
@@ -100,7 +95,6 @@ public:
         delete temp;
     }
 
-    // Delete from End
     void deleteEnd() {
         if (head == NULL) {
             cout << "List is empty\n";
@@ -123,7 +117,6 @@ public:
         delete temp;
     }
 
-    // Delete at Position (0-based indexing)
     void deletePosition(int pos) {
         if (head == NULL) {
             cout << "List is empty\n";
@@ -155,7 +148,6 @@ public:
         delete temp;
     }
 
-    // Display Forward
     void displayForward() {
         Node* temp = head;
 
@@ -169,7 +161,6 @@ public:
         cout << "NULL\n";
     }
 
-    // Display Backward
     void displayBackward() {
         if (head == NULL) {
             cout << "List is empty\n";
